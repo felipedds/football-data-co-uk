@@ -7,7 +7,7 @@ os.makedirs(DEST_FOLDER, exist_ok=True)
 
 # Base URL and seasons
 base_url = "https://www.football-data.co.uk/mmz4281"
-seasons = ["2425", "2324", "2223", "2122"]  # Add more seasons as needed
+seasons = ["2021", "2122", "2223", "2324", "2425"]  # Add more seasons as needed
 leagues = ["E0"]  # Add more league codes like 'E1', 'D1' if needed
 
 # Download files
