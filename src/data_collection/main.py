@@ -1,14 +1,14 @@
 import os
 import requests
 
-# Destination folder
-DESTINATION_FOLDER = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/raw/"
+DESTINATION_FOLDER = "/workspaces/football-data-co-uk/data/raw"
+
 os.makedirs(DESTINATION_FOLDER, exist_ok=True)
 
 # Base URL and seasons
 base_url = "https://www.football-data.co.uk/mmz4281"
-seasons = ["1920", "2021", "2122", "2223", "2324", "2425"]  # seasons
-leagues = ["E0"]  # league codes
+seasons = ["1920", "2021", "2122", "2223", "2324", "2425"]  # Add more seasons as needed
+leagues = ["E0"]  # Add more league codes like 'E1', 'D1' if needed
 
 # Download files
 for season in seasons:
@@ -20,8 +20,8 @@ for season in seasons:
         print(f"Downloading {url}...")
         response = requests.get(url)
         if response.status_code == 200:
-            with open(dest_path, 'wb') as f:
+            with open(dest_path, "wb") as f:
                 f.write(response.content)
-            print(f"Saved to {dest_path}.")
+            print(f"Saved to {dest_path}")
         else:
             print(f"Failed to download {url} (Status code: {response.status_code})")
