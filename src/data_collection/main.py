@@ -1,8 +1,8 @@
 import os
 import requests
 
-# Destination folder
-DESTINATION_FOLDER = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/raw/"
+DESTINATION_FOLDER = "/workspaces/football-data-co-uk/data/raw"
+
 os.makedirs(DESTINATION_FOLDER, exist_ok=True)
 
 # Base URL and seasons
