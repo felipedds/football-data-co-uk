@@ -2,8 +2,8 @@ import os
 import requests
 
 # Destination folder
-DEST_FOLDER = "/workspaces/football-data-co-uk/data/raw"
-os.makedirs(DEST_FOLDER, exist_ok=True)
+DESTINATION_FOLDER = "/workspaces/football-data-co-uk/data/raw"
+os.makedirs(DESTINATION_FOLDER, exist_ok=True)
 
 # Base URL and seasons
 base_url = "https://www.football-data.co.uk/mmz4281"
