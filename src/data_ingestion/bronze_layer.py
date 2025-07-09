@@ -9,6 +9,7 @@ spark = SparkSession.builder.getOrCreate()
 
 # Folder raw layer
 RAW_FOLDER = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/raw"
+BRONZE_FOLDER = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/bronze"
 
 # Lista todos os arquivos CSV no raw folder
 csv_files = [f for f in os.listdir(RAW_FOLDER) if f.endswith(".csv")]
@@ -20,17 +21,16 @@ for csv_file in csv_files:
     
     print(f"Processing {csv_file} for season {season}, league {league_code}...")
     
-    # Caminho completo do arquivo CSV
+    # CSV path
     csv_path = os.path.join(RAW_FOLDER, csv_file)
     
     # Read CSV
     df = pd.read_csv(csv_path)
 
-    # Caminho para salvar Delta
-    parquet_path = f"{RAW_FOLDER}/{season}_{league_code}.parquet"
-    print(f"Saved Delta table to {parquet_path}")
+    # Parquet path
+    parquet_path = f"{BRONZE_FOLDER}/{season}_{league_code}.parquet"
 
-    # Salvar como Delta (partitioned by season and league_code)
+    # Save parquet file
     df.to_parquet(parquet_path, engine="pyarrow", index=False)
-    print(f"Saved Delta table to {parquet_path}")
+    print(f"Saved parquet file to {parquet_path}")
 
