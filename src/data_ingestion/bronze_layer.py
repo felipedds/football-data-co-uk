@@ -5,7 +5,7 @@ import os
 
 
 # Spark session
-spark = SparkSession.builder.getOrCreate()
+spark = SparkSession.builder.appName("BronzeLayer").getOrCreate()
 
 # Folder raw layer
 RAW_FOLDER = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/raw"
