@@ -2,9 +2,10 @@ import os
 import pandas as pd
 from glob import glob
 
+
 # Define source and destination paths
 BRONZE_FOLDER = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/bronze"
-OUTPUT_FILE = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/silver/consolidated_data.parquet"
+SILVER_FILE = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/silver/consolidated_data.parquet"
 
 # List of columns to keep
 columns_to_keep = [
@@ -29,5 +30,5 @@ for file in parquet_files:
         print(f"Skipping {file} due to error: {e}")
 
 # Save the combined DataFrame as a single Parquet file
-combined_df.to_parquet(OUTPUT_FILE, engine="pyarrow", index=False)
-print(f"Consolidated parquet file saved to: {OUTPUT_FILE}")
+combined_df.to_parquet(SILVER_FILE, engine="pyarrow", index=False)
+print(f"Consolidated parquet file saved to: {SILVER_FILE}")
