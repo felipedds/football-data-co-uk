@@ -1,17 +1,19 @@
 import pandas as pd
 
 
-# Paths
-SILVER_FILE = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/silver/consolidated_data.parquet"
-GOLD_FILE = "/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/gold/enriched_data.parquet"
+leagues = ["premier_league"]
+for league in leagues:
+    # Paths
+    SILVER_FILE = f"/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/silver/{league}/consolidated_data.parquet"
+    GOLD_FILE = f"/Workspace/Repos/felipediasd@gmail.com/football-data-co-uk/data/gold/{league}/enriched_data.parquet"
 
-# Read Silver layer parquet file
-df_silver = pd.read_parquet(SILVER_FILE, engine="pyarrow")
+    # Read Silver layer parquet file
+    df_gold = pd.read_parquet(SILVER_FILE, engine="pyarrow")
 
-# Add new columns
-df_silver["TotalGoals"] = df_silver["FTHG"] + df_silver["FTAG"]
-df_silver["GoalDifference"] = df_silver["FTHG"] - df_silver["FTAG"]
+    # Add new columns
+    df_gold["TotalGoals"] = df_gold["FTHG"] + df_gold["FTAG"]
+    df_gold["GoalDifference"] = df_gold["FTHG"] - df_gold["FTAG"]
 
-# Save as Gold layer parquet file
-df_silver.to_parquet(GOLD_FILE, engine="pyarrow", index=False)
-print(f"Gold layer parquet file saved to {GOLD_FILE}")
+    # Save as Gold layer parquet file
+    df_gold.to_parquet(GOLD_FILE, engine="pyarrow", index=False)
+    print(f"Gold layer parquet file saved to: {GOLD_FILE}")
