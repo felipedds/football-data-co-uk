@@ -6,14 +6,16 @@ Project related with site: https://www.football-data.co.uk/
         ↓
 API (football-data.co.uk)
         ↓
-CSV download
+CSV files download 
         ↓
-Databricks Volume (RAW layer) [/Volumes/dev_football_data_uk/france_ligue_1_raw/files]
+Databricks Volume (RAW layer) [Ex:. /Volumes/dev_football_data_uk/france_ligue_1_raw/files]
         ↓
 Spark Declarative Pipeline (SDP)
         ↓
 dev_football_data_uk.england_premier_league_bronze
+        ↓
 dev_football_data_uk.england_premier_league_silver
+        ↓
 dev_football_data_uk.england_premier_league_gold
 ```
 
