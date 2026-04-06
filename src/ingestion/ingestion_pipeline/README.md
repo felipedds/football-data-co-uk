@@ -1,21 +1,38 @@
 # ingestion_pipeline
 
+#### Unity Catalog structure
+Catalog: dev
+
+Schemas:
+- football_data_uk_raw
+- football_data_uk_bronze
+- football_data_uk_silver
+- football_data_uk_gold
+
+Volume:
+- dev.football_data_uk_raw.files
+
+### Raw Folder Structure
+```
+/Volumes/dev/football_data_uk_raw/files/
+├── england_premier_league/
+├── spain_la_liga/
+├── germany_bundesliga/
+├── italy_serie_a/
+└── france_ligue_1/
+```
+
+#### Configure schema tracking (Auto Loader)
+Auto Loader requires a schema tracking location.
+Path:
+```/Volumes/dev/football_data_uk_raw/files/_schemas/```
+This stores:
+- inferred schema
+- processed files metadata
+
+
 This folder defines all source code for the 'ingestion_pipeline' pipeline:
 
 - `explorations`: Ad-hoc notebooks used to explore the data processed by this pipeline.
 - `transformations`: All dataset definitions and transformations.
 - `utilities`: Utility functions and Python modules used in this pipeline.
-
-## Getting Started
-
-To get started, go to the `transformations` folder -- most of the relevant source code lives there:
-
-* By convention, every dataset under `transformations` is in a separate file.
-* Take a look at the sample under "sample_users_ingestion_pipeline.py" to get familiar with the syntax.
-  Read more about the syntax at https://docs.databricks.com/ldp/developer/python-ref.
-* Use `Run file` to run and preview a single transformation.
-* Use `Run pipeline` to run _all_ transformations in the entire pipeline.
-* Use `+ Add` in the file browser to add a new data set definition.
-* Use `Schedule` to run the pipeline on a schedule!
-
-For more tutorials and reference material, see https://docs.databricks.com/ldp.

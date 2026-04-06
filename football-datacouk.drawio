@@ -1,0 +1,121 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Page-1" id="6FFdu8IY96q4FW409plQ">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;" value="" vertex="1">
+          <mxGeometry height="400" width="800" x="240" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-49" parent="1" style="rounded=1;whiteSpace=wrap;html=1;dashed=1;dashPattern=12 12;" value="" vertex="1">
+          <mxGeometry height="290" width="450" x="565" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-1" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Azure_Databricks.svg;" value="" vertex="1">
+          <mxGeometry height="68" width="62.8" x="530" y="80" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-2" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.services.excel_services;" value="" vertex="1">
+          <mxGeometry height="40" width="50" x="270" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Spark Declarative Pipeline (SDP)" vertex="1">
+          <mxGeometry height="30" width="200" x="695" y="410" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-5" parent="1" style="sketch=0;outlineConnect=0;fontColor=#232F3E;gradientColor=none;strokeColor=#232F3E;fillColor=#ffffff;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;fontSize=12;fontStyle=0;aspect=fixed;shape=mxgraph.aws4.resourceIcon;resIcon=mxgraph.aws4.volume;" value="Volume" vertex="1">
+          <mxGeometry height="60" width="60" x="422" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-6" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value=".CSV file" vertex="1">
+          <mxGeometry height="30" width="60" x="265" y="263" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-7" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Raw Layer" vertex="1">
+          <mxGeometry height="30" width="60" x="422" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-8" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Bronze Layer" vertex="1">
+          <mxGeometry height="30" width="60" x="615" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Silver Layer" vertex="1">
+          <mxGeometry height="30" width="60" x="765" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-11" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Gold Layer" vertex="1">
+          <mxGeometry height="30" width="60" x="923" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-13" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="620" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-14" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="770" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-15" parent="1" style="shape=datastore;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="50" width="50" x="923" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-42" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Streaming Table" vertex="1">
+          <mxGeometry height="30" width="110" x="590" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Materialized views" vertex="1">
+          <mxGeometry height="30" width="110" x="745" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-44" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Materialized views" vertex="1">
+          <mxGeometry height="30" width="110" x="893" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-46" parent="1" style="sketch=0;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;fillColor=#505050;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;outlineConnect=0;align=center;shape=mxgraph.office.concepts.website;" value="" vertex="1">
+          <mxGeometry height="49" width="59" x="82" y="223" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-47" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Website" vertex="1">
+          <mxGeometry height="30" width="60" x="81" y="272" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-48" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="https://www.football-data.co.uk/" vertex="1">
+          <mxGeometry height="30" width="181" x="21" y="293" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-52" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="2" vertex="1">
+          <mxGeometry height="30" width="60" x="530" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-53" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="522" y="253" as="sourcePoint" />
+            <mxPoint x="592" y="253.43" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-54" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="685" y="250" as="sourcePoint" />
+            <mxPoint x="755" y="250.43" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-55" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="839" y="250" as="sourcePoint" />
+            <mxPoint x="909" y="250.43" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9NXy66vtsL3pgnV4Kw7D-57" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="&lt;h1 data-section-id=&quot;heh9b5&quot; data-start=&quot;1123&quot; data-end=&quot;1173&quot; style=&quot;color: rgb(0, 0, 0); text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Step 1 — Ingest raw data using Databricks Jobs&lt;/font&gt;&lt;/h1&gt;&lt;p data-start=&quot;1175&quot; data-end=&quot;1240&quot; style=&quot;color: rgb(0, 0, 0); text-align: start;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;A Databricks Job runs a Python script to download CSV files from:&amp;nbsp;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); background-color: transparent;&quot;&gt;https://www.football-data.co.uk/&lt;/span&gt;&lt;/font&gt;&lt;/p&gt;&lt;p data-start=&quot;1175&quot; data-end=&quot;1240&quot; style=&quot;color: rgb(0, 0, 0); text-align: start;&quot;&gt;&lt;span style=&quot;color: light-dark(rgb(0, 0, 0), rgb(237, 237, 237)); background-color: transparent;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Behavior:&lt;/font&gt;&lt;/span&gt;&lt;/p&gt;&lt;ul data-start=&quot;1293&quot; data-end=&quot;1367&quot; style=&quot;color: rgb(0, 0, 0); text-align: start;&quot;&gt;&lt;li data-section-id=&quot;i9b67z&quot; data-start=&quot;1293&quot; data-end=&quot;1330&quot; style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Downloads CSV per league and season&lt;/font&gt;&lt;/li&gt;&lt;li data-section-id=&quot;h0fmhk&quot; data-start=&quot;1331&quot; data-end=&quot;1367&quot; style=&quot;&quot;&gt;&lt;font style=&quot;font-size: 11px;&quot;&gt;Stores files in Volume (RAW layer)&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;div style=&quot;text-align: start;&quot;&gt;&lt;h1 data-section-id=&quot;14k917v&quot; data-start=&quot;2000&quot; data-end=&quot;2054&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Step 2 — Bronze layer (ingestion with Auto Loader)&lt;/font&gt;&lt;/h1&gt;&lt;p data-start=&quot;2056&quot; data-end=&quot;2119&quot;&gt;Use &lt;strong data-start=&quot;2060&quot; data-end=&quot;2098&quot;&gt;Spark Declarative Pipelines (&lt;code data-start=&quot;2091&quot; data-end=&quot;2095&quot;&gt;dp&lt;/code&gt;)&lt;/strong&gt; to ingest raw files.&lt;/p&gt;&lt;h3 data-section-id=&quot;1ngdk1c&quot; data-start=&quot;2121&quot; data-end=&quot;2134&quot;&gt;Behavior:&lt;/h3&gt;&lt;ul data-start=&quot;2135&quot; data-end=&quot;2224&quot;&gt;&lt;li data-section-id=&quot;vqt4bo&quot; data-start=&quot;2135&quot; data-end=&quot;2164&quot;&gt;Reads CSV files from Volume&lt;/li&gt;&lt;li data-section-id=&quot;ly26bn&quot; data-start=&quot;2165&quot; data-end=&quot;2198&quot;&gt;Uses Auto Loader (&lt;code data-start=&quot;2185&quot; data-end=&quot;2197&quot;&gt;cloudFiles&lt;/code&gt;)&lt;/li&gt;&lt;li data-section-id=&quot;11r17nh&quot; data-start=&quot;2199&quot; data-end=&quot;2224&quot;&gt;Adds ingestion metadata&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;h1 data-section-id=&quot;g8ti34&quot; data-start=&quot;2568&quot; data-end=&quot;2609&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Step 3 — Silver layer (data cleaning)&lt;/font&gt;&lt;/h1&gt;&lt;p data-start=&quot;2611&quot; data-end=&quot;2653&quot;&gt;Transform Bronze data into clean datasets.&lt;/p&gt;&lt;h3 data-section-id=&quot;dveywu&quot; data-start=&quot;2655&quot; data-end=&quot;2675&quot;&gt;Transformations:&lt;/h3&gt;&lt;ul data-start=&quot;2676&quot; data-end=&quot;2741&quot;&gt;&lt;li data-section-id=&quot;m8ckbu&quot; data-start=&quot;2676&quot; data-end=&quot;2695&quot;&gt;Remove duplicates&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;e6qe93&quot; data-start=&quot;2696&quot; data-end=&quot;2720&quot;&gt;Filter invalid records&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;ni1s44&quot; data-start=&quot;2721&quot; data-end=&quot;2741&quot;&gt;Standardize schema&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;h1 data-section-id=&quot;1skxuug&quot; data-start=&quot;2927&quot; data-end=&quot;2974&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Step 4 — Gold layer (business aggregations)&lt;/font&gt;&lt;/h1&gt;&lt;p data-start=&quot;2976&quot; data-end=&quot;3015&quot;&gt;Create analytical tables for reporting.&lt;/p&gt;&lt;h3 data-section-id=&quot;xwfqoq&quot; data-start=&quot;3017&quot; data-end=&quot;3035&quot;&gt;Example logic:&lt;/h3&gt;&lt;ul data-start=&quot;3036&quot; data-end=&quot;3084&quot;&gt;&lt;li data-section-id=&quot;1wv8oki&quot; data-start=&quot;3036&quot; data-end=&quot;3063&quot;&gt;Combine home + away stats&lt;br&gt;&lt;/li&gt;&lt;li data-section-id=&quot;1lt3v9v&quot; data-start=&quot;3064&quot; data-end=&quot;3084&quot;&gt;Aggregate per team&lt;/li&gt;&lt;/ul&gt;&lt;div&gt;&lt;h1 data-section-id=&quot;ijl2lp&quot; data-start=&quot;3250&quot; data-end=&quot;3297&quot;&gt;&lt;font style=&quot;font-size: 15px;&quot;&gt;Step 5 — Orchestration with Databricks Jobs&lt;/font&gt;&lt;/h1&gt;&lt;p data-start=&quot;3299&quot; data-end=&quot;3332&quot;&gt;Define a Job with two main steps:&lt;/p&gt;&lt;h3 data-section-id=&quot;1hrgyus&quot; data-start=&quot;3334&quot; data-end=&quot;3361&quot;&gt;Task 1 — Data ingestion&lt;/h3&gt;&lt;ul data-start=&quot;3362&quot; data-end=&quot;3416&quot;&gt;&lt;li data-section-id=&quot;vqvl49&quot; data-start=&quot;3362&quot; data-end=&quot;3382&quot;&gt;Runs Python script&lt;/li&gt;&lt;li data-section-id=&quot;i0miko&quot; data-start=&quot;3383&quot; data-end=&quot;3416&quot;&gt;Downloads CSV files into Volume&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;pxetb1&quot; data-start=&quot;3418&quot; data-end=&quot;3449&quot;&gt;Task 2 — Pipeline execution&lt;/h3&gt;&lt;ul data-start=&quot;3450&quot; data-end=&quot;3518&quot;&gt;&lt;li data-section-id=&quot;2ox6c9&quot; data-start=&quot;3450&quot; data-end=&quot;3483&quot;&gt;Runs Spark Declarative Pipeline&lt;/li&gt;&lt;li data-section-id=&quot;13ckioc&quot; data-start=&quot;3484&quot; data-end=&quot;3518&quot;&gt;Processes Bronze → Silver → Gold&lt;/li&gt;&lt;/ul&gt;&lt;h3 data-section-id=&quot;147z8l8&quot; data-start=&quot;3520&quot; data-end=&quot;3539&quot;&gt;Execution flow:&lt;/h3&gt;&lt;h3 data-section-id=&quot;147z8l8&quot; data-start=&quot;3520&quot; data-end=&quot;3539&quot;&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255)); font-size: 12px; font-weight: normal;&quot;&gt;Download Job → Pipeline Run&lt;/span&gt;&lt;/h3&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="953.75" width="380" x="1100" y="-130" as="geometry" />
+        </mxCell>
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-1" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="347" y="254.47" as="sourcePoint" />
+            <mxPoint x="407" y="254.47" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-4" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="Databricks Jobs" vertex="1">
+          <mxGeometry height="30" width="200" x="235" y="460" as="geometry" />
+        </mxCell>
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-7" parent="1" style="image;aspect=fixed;html=1;points=[];align=center;fontSize=12;image=img/lib/azure2/analytics/Azure_Databricks.svg;" value="" vertex="1">
+          <mxGeometry height="68" width="62.8" x="220" y="20" as="geometry" />
+        </mxCell>
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-9" edge="1" parent="1" style="endArrow=classic;html=1;rounded=0;" value="">
+          <mxGeometry height="50" relative="1" width="50" as="geometry">
+            <mxPoint x="220" y="260" as="sourcePoint" />
+            <mxPoint x="170" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-10" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="3" vertex="1">
+          <mxGeometry height="30" width="60" x="690" y="213" as="geometry" />
+        </mxCell>
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-13" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="4" vertex="1">
+          <mxGeometry height="30" width="60" x="840" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="SsQxTYefVqJcy9LnXgOy-14" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="1" vertex="1">
+          <mxGeometry height="30" width="60" x="340" y="223" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

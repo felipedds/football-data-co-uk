@@ -2,29 +2,47 @@ from pyspark import pipelines as dp
 from pyspark.sql.functions import col, sum
 
 
-@dp.table(
-    name="dev_football_data_uk.france_ligue_1_gold.gold",
-    comment="Aggregated team statistics"
-)
+# Config
+env = "dev"
+domain = "football_data_uk"
 
-def gold_ligue1():
-    df = dp.read("dev_football_data_uk.france_ligue_1_silver.silver")
+leagues = {
+    "england": "premier_league",
+    "spain": "la_liga",
+    "germany": "bundesliga",
+    "italy": "serie_a",
+    "france": "ligue_1"
+}
 
-    home = df.select(
-        col("HomeTeam").alias("Team"),
-        col("FTHG").alias("GoalsForFullTime"),
-        col("FTAG").alias("GoalsAgainstFullTime")
+# Loop to create Gold tables
+for country, league in leagues.items():
+
+    table_name = f"{country}_{league}"
+    silver_table = f"{env}.{domain}_silver.{table_name}"
+    gold_table = f"{env}.{domain}_gold.{table_name}"
+
+    @dp.table(
+        name=gold_table,
+        comment=f"Aggregated team statistics ({league} - {country})"
     )
+    def gold_table_fn(silver_table=silver_table):
+        df = dp.read(silver_table)
 
-    away = df.select(
-        col("AwayTeam").alias("Team"),
-        col("FTAG").alias("GoalsForFullTime"),
-        col("FTHG").alias("GoalsAgainstFullTime")
-    )
+        home = df.select(
+            col("HomeTeam").alias("Team"),
+            col("FTHG").alias("GoalsForFullTime"),
+            col("FTAG").alias("GoalsAgainstFullTime")
+        )
 
-    combined = home.unionByName(away)
+        away = df.select(
+            col("AwayTeam").alias("Team"),
+            col("FTAG").alias("GoalsForFullTime"),
+            col("FTHG").alias("GoalsAgainstFullTime")
+        )
 
-    return combined.groupBy("Team").agg(
-        sum("GoalsForFullTime").alias("total_goals_scored"),
-        sum("GoalsAgainstFullTime").alias("total_goals_conceded")
-    )
+        combined = home.unionByName(away)
+
+        return combined.groupBy("Team").agg(
+            sum("GoalsForFullTime").alias("total_goals_scored"),
+            sum("GoalsAgainstFullTime").alias("total_goals_conceded")
+        )

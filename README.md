@@ -8,16 +8,28 @@ API (football-data.co.uk)
         ↓
 CSV files download 
         ↓
-Databricks Volume (RAW layer) [Ex:. /Volumes/dev_football_data_uk/france_ligue_1_raw/files]
-        ↓
-Spark Declarative Pipeline (SDP)
-        ↓
-dev_football_data_uk.england_premier_league_bronze
-        ↓
-dev_football_data_uk.england_premier_league_silver
-        ↓
-dev_football_data_uk.england_premier_league_gold
+dev (catalog)
+└── football_data_uk_raw (schema)
+    └── volume: files
+└── football_data_uk_bronze
+    └── table: files
+└── football_data_uk_silver
+    └── table: files
+└── football_data_uk_gold
+    └── table: files
 ```
+
+## Volume structure
+```
+/Volumes/dev/football_data_uk_raw/files/
+│
+├── england_premier_league/
+├── spain_la_liga/
+├── germany_bundesliga/
+├── italy_serie_a/
+└── france_ligue_1/
+```
+
 
 Unit Catalog development based by: <br>
 `https://community.databricks.com/t5/technical-blog/how-to-structure-unity-catalog-like-a-pro-real-world-hierarchy/ba-p/120125?utm_source=copilot.com `
