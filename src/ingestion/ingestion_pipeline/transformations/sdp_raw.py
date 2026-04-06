@@ -1,6 +1,7 @@
 import os
 import requests
 
+
 def download_raw_data():
     BASE_URL = "https://www.football-data.co.uk/mmz4281"
     seasons = ["1819", "1920", "2021", "2122", "2223", "2324", "2425"]
@@ -14,7 +15,9 @@ def download_raw_data():
         "ligue_1": "F1"
     }
 
-    environments = ["dev_football_data_uk"]
+    # Updated structure
+    environments = ["dev"]
+    domain = "football_data_uk"
 
     leagues = {
         "england": "premier_league",
@@ -26,8 +29,8 @@ def download_raw_data():
 
     for env in environments:
         for country, league in leagues.items():
-            # DEFINE VOLUME PATH
-            DESTINATION_FOLDER = f"/Volumes/{env}/{country}_{league}_raw/files/"
+            # Folder structure
+            DESTINATION_FOLDER = (f"/Volumes/{env}/{domain}_raw/files/{country}_{league}/")
             os.makedirs(DESTINATION_FOLDER, exist_ok=True)
 
             league_code = league_codes[league]
@@ -36,14 +39,16 @@ def download_raw_data():
             for season in seasons:
                 file_name = f"{league_code}.csv"
                 url = f"{BASE_URL}/{season}/{file_name}"
-                file_path = os.path.join(DESTINATION_FOLDER, f"{season}_{file_name}")
+                file_path = os.path.join(
+                    DESTINATION_FOLDER, f"{season}_{file_name}"
+                )
 
                 if os.path.exists(file_path):
                     print(f"Skipping: {file_path}")
                     continue
 
                 print(f"Downloading {url}...")
-                response = requests.get(url)
+                response = requests.get(url, timeout=30)
 
                 if response.status_code == 200:
                     with open(file_path, "wb") as f:
@@ -51,3 +56,4 @@ def download_raw_data():
                     print(f"Saved: {file_path}")
                 else:
                     print(f"Failed: {url} ({response.status_code})")
+                    
