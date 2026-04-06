@@ -12,11 +12,11 @@ dev (catalog)
 └── football_data_uk_raw (schema)
     └── volume: files
 └── football_data_uk_bronze
-    └── table: files
+    └── table: streaming table
 └── football_data_uk_silver
-    └── table: files
+    └── table: streaming table
 └── football_data_uk_gold
-    └── table: files
+    └── table: materialized view
 ```
 
 ## Volume structure
