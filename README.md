@@ -11,11 +11,11 @@ CSV files download
 dev (catalog)
 └── football_data_uk_raw (schema)
     └── volume: files
-└── football_data_uk_bronze
+└── football_data_uk_bronze (schema)
     └── table: streaming table
-└── football_data_uk_silver
+└── football_data_uk_silver (schema)
     └── table: streaming table
-└── football_data_uk_gold
+└── football_data_uk_gold (schema)
     └── table: materialized view
 ```
 
