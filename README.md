@@ -1,6 +1,8 @@
 # football-data-co-uk
 Project related with site: https://www.football-data.co.uk/
 
+The name convention followed was: https://learn.microsoft.com/en-us/training/wwl-databricks/create-and-organize-objects-in-unity-catalog/2-apply-naming-conventions
+
 ```
 [Python script]
         ↓
