@@ -23,10 +23,7 @@ for country, league in leagues.items():
     source_path = f"/Volumes/{env}/{domain}_raw/files/{table_name}/"
     schema_path = f"/Volumes/{env}/{domain}_raw/files/_schemas/{table_name}/"
     
-    @dp.table(
-        name=full_table_name,
-        comment=f"Raw ingestion of {league} CSV data ({country})"
-    )
+    @dp.table(name=full_table_name, comment=f"Raw ingestion of {league} CSV data ({country})")
     def bronze_table(table_name=table_name, source_path=source_path, schema_path=schema_path):
         df = (
             spark.readStream
@@ -35,6 +32,7 @@ for country, league in leagues.items():
             .option("header", "true")
             .option("cloudFiles.inferColumnTypes", "true")
             .option("cloudFiles.schemaLocation", schema_path)
+            .option("cloudFiles.rescuedDataColumn", "_rescued_data")
             .load(source_path)
         )
 
@@ -42,3 +40,4 @@ for country, league in leagues.items():
             df.withColumn("ingestion_time", current_timestamp())
               .withColumn("source_file", col("_metadata.file_path"))
         )
+        

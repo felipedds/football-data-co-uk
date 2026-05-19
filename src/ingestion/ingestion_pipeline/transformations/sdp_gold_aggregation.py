@@ -14,19 +14,15 @@ leagues = {
     "france": "ligue_1"
 }
 
-# Loop to create Gold tables
-for country, league in leagues.items():
-
+def create_gold(country, league):
+    
     table_name = f"{country}_{league}"
     silver_table = f"{env}.{domain}_silver.{table_name}"
     gold_table = f"{env}.{domain}_gold.{table_name}"
 
-    @dp.table(
-        name=gold_table,
-        comment=f"Aggregated team statistics ({league} - {country})"
-    )
-    def gold_table_fn(silver_table=silver_table):
-        df = dp.read(silver_table)
+    @dp.materialized_view(name=gold_table, comment=f"Aggregated team statistics ({league} - {country})")
+    def gold():
+        df = spark.read.table(silver_table)
 
         home = df.select(
             col("HomeTeam").alias("Team"),
@@ -46,3 +42,7 @@ for country, league in leagues.items():
             sum("GoalsForFullTime").alias("total_goals_scored"),
             sum("GoalsAgainstFullTime").alias("total_goals_conceded")
         )
+
+# Create all tables
+for country, league in leagues.items():
+    create_gold(country, league)
