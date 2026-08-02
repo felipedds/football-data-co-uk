@@ -21,16 +21,31 @@ dev (catalog)
     └── table: materialized view
 ```
 
-## Volume structure
-```
-/Volumes/dev/football_data_uk_raw/files/
-│
-├── england_premier_league/
-├── spain_la_liga/
-├── germany_bundesliga/
-├── italy_serie_a/
-└── france_ligue_1/
-```
+## Commands
+```python -m venv .venv```       # Create a virtual environment
+```.venv\Scripts\Activate.ps1``` # Activate it
+```pip install -e .```           # Install the project and its dependencies
+
+## Folder structure
+statsbomb/
+├── data/
+│   ├── raw/                 # Raw data files
+│   ├── processed/           # Processed data files
+│   └── external/            # External datasets or data obtained from external sources
+├── notebooks/               # Jupyter notebooks for data exploration, and analysis
+├── src/                     # Source code
+│   ├── data_collection/     # Scripts or modules for data collection
+│   ├── data_preprocessing/  # Scripts or modules for data preprocessing
+│   ├── feature_engineering/ # Scripts or modules for feature engineering
+│   ├── modeling/            # Scripts or modules for modeling (machine learning models)
+│   └── evaluation/          # Scripts for model evaluation and performance metrics
+|   └── main.py 
+├── reports/                 # Reports generated(HTML, PDF) from analysis and modeling
+├── models/                  # Saved models or model artifacts
+├── environment.yml          # Conda environment file specifying dependencies
+├── README.md                # README file describing the project and its components
+└── requirements.txt         # Python dependencies file (alternative to environment.yml)
+
 
 
 Unit Catalog development based by: <br>

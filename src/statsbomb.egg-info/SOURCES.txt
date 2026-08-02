@@ -1,0 +1,12 @@
+README.md
+pyproject.toml
+src/data_ingestion.py
+src/ingestion/ingestion_pipeline/transformations/job_raw_ingestion.py
+src/ingestion/ingestion_pipeline/transformations/sdp_bronze_ingestion.py
+src/ingestion/ingestion_pipeline/transformations/sdp_gold_aggregation.py
+src/ingestion/ingestion_pipeline/transformations/sdp_silver_transformation.py
+src/statsbomb.egg-info/PKG-INFO
+src/statsbomb.egg-info/SOURCES.txt
+src/statsbomb.egg-info/dependency_links.txt
+src/statsbomb.egg-info/requires.txt
+src/statsbomb.egg-info/top_level.txt
